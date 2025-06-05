@@ -1,0 +1,177 @@
+%!TeX TxS-program:compile =txs:///pythontex
+\documentclass{mwart}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{pythontex}
+\usepackage{graphicx}
+\usepackage{pgf}
+\usepackage{lmodern,microtype}
+\usepackage{amsfonts}
+\usepackage{float}
+
+\addtolength{\topmargin}{-1cm}
+\addtolength{\oddsidemargin}{-2cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\textheight}{0cm}
+
+\def \R{\mathbb{R}}
+
+\author{Marta Hałas 282264}
+\title{\textbf{Lista 1, zadanie 1}}
+
+\begin{document}
+	\maketitle
+	\medskip
+	
+	\begin{pysub}
+		
+	minimum- to algorytm, ktróy porównuje elementy znajdujące się na liście 
+		
+	\end{pysub}
+	\begin{pysub}
+	minimum1- to algorytm,który tworzy kopię listy  
+		
+	\end{pysub}
+	\begin{pysub}
+	minimum2- to algorytm, który wykorzystuje pętle while 
+		
+	\end{pysub}
+	\begin{pysub}
+		
+	minimum3- to algorytm, który wykorzystuje iteratory 
+		
+	\end{pysub}
+	
+	\section{\textbf{Czas działania algorytmu zależny od długości listy dla list liczb}}\label{Czas działania algorytmu zależny od długości listy dla list liczb}
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\includegraphics[width=10cm]{wykres1.1.png}
+			\caption{Wykres: Czas działania algorytmu zależny od długości listy dla list liczb}
+		\end{center}
+	\end{figure}
+	
+	\medskip
+	\medskip
+	\medskip
+	\medskip
+	\medskip
+	
+	\begin{pysub}
+		
+		W początkowej fazie obliczeń dla list długości (czyt. elementów) 1,2,3 algorytm minimum2 okazał się najszybszy, jednak później od listy długości większej, niż 4 stał się najwolniejszym. Najszybszym okazał się algorytm pod nazwą minimum. Drugi najszybszy był algorytm minimum3, a trzeci minimum1.
+		
+	\end{pysub}
+	
+	\medskip
+	\medskip
+	\medskip
+	\medskip
+	\medskip
+	
+	\section{\textbf{Czas działania algorytmu zależny od długości listy dla list napisów długości 1}}\label{Czas działania algorytmu zależny od długości listy dla list napisów długości 1}
+
+	\medskip
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=10cm]{wykres2.2.png}
+			\caption{Wykres: Czas działania algorytmu zależny od długości listy dla list napisów długości 1}
+		\end{center}
+	\end{figure}
+
+	\medskip
+
+	\begin{pysub}
+	
+		W początkowej fazie obliczeń dla list o małej długości (1,2,3 elementy) algorytm minimum2 okazał się najszybszy, jednak później dla coraz to dłuższych list stał się najwolniejszym. Najszybszym okazał się algorytm pod nazwą minimum, jednak dla listy o liczbie elementów 6 był najwolniejszy. Między minimum i minimum3 w początkowej fazie wyliczeń (długość listy 1,2,3,4,5) jak i środkowej (długość listy 7,8,9,10,11,12,13,14,15,18) oraz fragment dla list długości od 20,21,22 algorytmy te działały w podobnym czasie, różnica jest praktycznie niezauważalna. Minimum1 było najwolniejsze na początku (długość listy od 1,2,3,4), później uplasowało się, można rzec jako 3 najszybszy algorytm. 
+	\end{pysub}
+	
+	
+	\section{\textbf{Czas działania algorytmu zależny od długości listy dla list napisów długości 32}}\label{Czas działania algorytmu zależny od długości listy dla list napisów długości 32}
+
+	\medskip
+
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=10cm]{wykres1.3.3.png}
+			\caption{Wykres: Czas działania algorytmu zależny od długości listy dla list napisów długości 32}
+		\end{center}
+	\end{figure}
+
+	\medskip
+
+	\begin{pysub}
+	
+		W początkowej fazie obliczeń dla list składających się z 1,2, jak i 3 elementów algorytm minimum2 okazał się najszybszy, jednak później od listy długości większej niż 3 stał się najwolniejszym. Bardzo sprawny okazał się algorytm minimum. Choć między minimum3, a minimum nie było dużej konkurencji (różnice w czasie wyliczeń są niezauważalne praktycznie) to dla ostatniej długości listy, czyli 23 elementowej wygrywa minimum3. Zarówno dla listy o długości (czyt. liczba elementów w liście) 16,17,18, jak i 20,21,22 algorytm minimum szybciej poradził sobie z wyznaczeniem minimum. Minimum1 dla list długości 1,2,3,4 było najwolniejsze. Dla reszty list o różnych długościach zajmowało 3 miejsce pod względem szybkości.
+	
+	\end{pysub}
+	
+	
+	
+	\section{\textbf{Czas działania algorytmu zależny od długości listy dla list napisów długości 1024}}\label{Czas działania algorytmu zależny od długości listy dla list napisów długości 1024}
+
+	\medskip
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=10cm]{1.4.4.png}
+			\caption{Wykres: Czas działania algorytmu zależny od długości listy dla list napisów długości 1024}
+		\end{center}
+	\end{figure}
+	
+	\medskip
+	\medskip 
+	\medskip
+	
+	\begin{pysub}
+	
+		Najwolniejszy okazał się algorytm minimum2, chociaż z listami o długości 1,2 liczył najszybciej, a dla długości list 3,4,5 był trzecim najszybszy. Minimum okazało się najsprawniejsze w wyliczeniach, choć konkurowało z minimum3 (różnice praktycznie nie widoczne w ich czasie wyliczeń minimum z listy) to dla list długości 15,16,18 i 22,23 wygrywa minimum. Minimum1 liczyło najwolniej dla list długości 1,2,3,4. Później algorytm ten zajął trzecie miejsce.
+		
+	\end{pysub}
+	
+	\medskip
+	\medskip
+	\medskip
+	\medskip
+	\medskip
+	
+	\section{\textbf{Czas działania algorytmu zależny od napisu dla list długości 1000}}\label{Czas działania algorytmu zależny od napisu dla list długości 1000}
+	
+	\medskip
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=10cm]{wykres1.5.dosc.png}
+			\caption{Wykres: Czas działania algorytmu zależny od napisu dla list długości 1000}
+		\end{center}
+	\end{figure}
+	
+	\medskip
+	
+	\begin{pysub}
+		
+		Minimum2 dla każdej długości napisu listy 1000-elementowej poza 1 okazało się najwolniejsze. Dla napisów długości 2,3,4,9,10,11,12,14,17,20 najwolniejszym algorytmem okazał się minimum1, najszybciej policzył dla napisu długości 16. Najszybciej z różnymi długościami radził sobie algorytm pod nazwą minimum3, najwolniej liczył dla długości napisów: 5,16. Minimum najszybciej policzyło dla długości napisów 5,10,11,22,23, a najwolniej dla 1,6,8,13,18,19,21.
+		
+	\end{pysub}
+	\medskip
+	\begin{center}
+		\title{\textbf{zadanie 2}}
+	\end{center}
+	\medskip
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=10cm]{wykres2.png}
+			\caption{Wykres:Czas szukania miejsca zerowego funkcji arctan(x)-1 metodą bisekcji na przedziale (0,10n), gdzie n z przedziału 1 do 100}
+		\end{center}
+	\end{figure}
+	
+	\begin{pysub}
+		
+		Otrzymany wykres jest zbliżony do wykresu logarytmu o podstawie 2
+		
+	\end{pysub}
+	
+	
+\end{document}
